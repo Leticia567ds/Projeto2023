@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BombLanches</title>
+</head>
+
+<body>
+    <header>
+        <div id="info">
+            Cliente:<input id="nome" type="text">
+            Endereço:<input id="endereco"  type="text">
+            Produto:<input id="produto" type="text">
+            Id_entregador:<input id="id_entre" type="text">
+            <button onclick="cadastrar()">Gerar produto</button>
+        </div>
+    </header>
+</body>
+<script>
+    var urLanches = `http://localhost:5000/bomblanches/criaDor`;
+    var lanches = [];
+
+    function cadastrar(){ 
+        let corpo = {
+        "cliente": document.querySelector("#nome").value,
+        "endereco": document.querySelector("#endereco").value,
+        "produto": document.querySelector("#produto").value ,
+        "id_entregador":document.querySelector("#id_entre").value
+    }
+    const options = {
+        "method": 'POST',
+        "headers": {"Content-Type": 'application/json' }
+    };
+       options.body = JSON.stringify(corpo);
+
+       //Faz efetivamente a requisição ao back-end
+      //composição alinhado
+       if(corpo.nome != 0 || corpo.endereco != 0 || corpo.produto != 0 || corpo.id_entre != 0){
+        fetch(urLanches, options)
+        .then(resp => resp.status)
+        .then(resp => {
+            if (resp == 201) {
+                 alert('Enviado com sucesso')
+                 window.location.reload();
+                } else {
+                    alert('Erro no cadastramento:' + resp);
+                    window.location.reload();
+                }
+        })
+        .catch(err => alert(err));
+       } else {
+        alert('Preencha os campos obrigatórios');
+    }
+}
+
+</script>
+
+</html>
