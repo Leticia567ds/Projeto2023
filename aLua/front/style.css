@@ -38,12 +38,12 @@ div{
     padding: 10px;
 
 }
-.all{
+/* .all{
     display: flex;
     justify-content: space-around;
     align-items: center;
     
-}
+} */
 .global{
     display: flex;
     background-color: rgba(141, 137, 137, 0.534);

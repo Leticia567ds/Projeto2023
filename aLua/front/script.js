@@ -1,8 +1,11 @@
-var urLanches = `http://localhost:5000/bomblanches/criaDor`;
-var urListar = `http://localhost:5000/bomblanches/dor`;
-var corpo = document.querySelector(".all");
-
+const urLanches = 'http://localhost:5000/bomblanches/criaDor';
+const urListar = 'http://localhost:5000/bomblanches/dor';
+const corpo = document.querySelector(".all");
 var listar = [];
+
+const min = 5;
+
+
 
 const carregar = () => { 
  const options = { method: 'GET' }; 
@@ -11,22 +14,26 @@ fetch(urListar, options)
 .then(res => { 
     listar = res; 
     lista();
+  
+    
  }) 
 .catch(err => console.error(err)); 
 }
 
-const lista = () =>{
-
+const lista = () => {
     listar.forEach(e => {
            let glob = document.querySelector(".global").cloneNode(true);
-
            glob.classList.remove("modelo");
-
-           glob.querySelector("#id_pedido").innerHTML += e.id_pedido;
+           
+            glob.querySelector("#id_pedido").innerHTML += e.id_pedido;
 
            glob.querySelector("#cliente").innerHTML += e.cliente;
+           glob.querySelector("#h_pedi").innerHTML += e.hora_pedido;
 
           corpo.appendChild(glob)
+       
+           
+          
         })
    
     
