@@ -1,0 +1,71 @@
+*{
+
+    margin: 0%;
+
+    padding: 0%;
+
+    box-sizing: border-box;
+
+}
+
+.modelo {
+    display: none;
+    visibility: hidden;
+}
+
+div{
+
+    /* background-color: aquamarine; */
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 40px;
+
+    display: block;
+
+}
+#info input, p{
+
+    padding: 10px;
+
+}
+#btn button{
+
+    padding: 10px;
+
+}
+.all{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.global{
+    display: flex;
+    background-color: rgba(141, 137, 137, 0.534);
+    width: 50vh;
+    border-radius: 10px;
+}
+
+#etapaone h5{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: -15px;
+color: red;
+}
+#global23{
+    display: flex;
+    background-color: rgba(141, 137, 137, 0.534);
+    width: 50vh;
+    border-radius: 10px;
+}
+.aaa{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
