@@ -20,7 +20,7 @@
 
 
 
-<body>
+<body onload="carregar()">
 
     <header>
 
@@ -28,15 +28,9 @@
 
             <p>Cliente:</p><input id="cliente" type="text">
 
-
-
             <p>Endereço:</p> <input id="endereco" type="text">
 
-
-
             <p>Produto:</p><input id="produto" type="text">
-
-
 
             <p>Id_entregador:</p> <input id="id_entre" type="text">
 
@@ -62,7 +56,7 @@
        
         
         <div class="all">
-            <div id="global">
+            <div class="global modelo">
                 <div id="etapaone">
                     <h5>Em excusão</h5>
                     <p class="id_pedido">Id:1</p>
@@ -84,6 +78,7 @@
                 </div>
 
             </div>
+
             <div id="global23">
                 <div id="etapaone">
                     <h5>A caminho</h5>
@@ -100,6 +95,9 @@
                     <p class="produto">Produto:X-tudo</p>
 
                     <p class="data">Data:12/02/2023</p>
+
+                    <p class="ende">Endereço:Rua varjão, bairro: maria da penhall,Sp</p>
+
                     <button id="btn">Pedido entregue</button>
                 </div>
 

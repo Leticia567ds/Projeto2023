@@ -29,7 +29,7 @@ describe pedidos;
 show tables;
 
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projetos23/aLua/docs/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Projeto2023/aLua/docs/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -38,7 +38,7 @@ IGNORE 1 ROWS;
 
 select * from entregadores;
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projetos23/aLua/docs/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Projeto2023/aLua/docs/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
