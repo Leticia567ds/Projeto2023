@@ -1,7 +1,34 @@
-var urLanches = `http://localhost:5000/bomblanches/criaDor`;
+const urLanches = 'http://localhost:5000/bomblanches/criaDor';
+const urListar = 'http://localhost:5000/bomblanches/dor';
+const corpo = document.querySelector(".all");
+var listar = [];
 
-var lanches = [];
+const carregar = () => { 
+ const options = { method: 'GET' }; 
+fetch(urListar, options)
+ .then(res => res.json()) 
+.then(res => { 
+    listar = res; 
+    lista();
+ }) 
+.catch(err => console.error(err)); 
+}
 
+const lista = () => {
+    listar.forEach(e => {
+           let glob = document.querySelector(".global").cloneNode(true);
+           glob.classList.remove("modelo");
+
+           glob.querySelector("#id_pedido").innerHTML += e.id_pedido;
+
+           glob.querySelector("#cliente").innerHTML += e.cliente;
+           glob.querySelector("#h_pedi").innerHTML += e.hora_pedido;
+
+          corpo.appendChild(glob)
+        })
+   
+    
+}
 
 
 function cadastrar() {
