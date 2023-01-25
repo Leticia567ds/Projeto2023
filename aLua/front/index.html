@@ -1,61 +1,116 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
+
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BombLanches</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
 </head>
 
+
+
 <body>
+
     <header>
+
         <div id="info">
-            Cliente:<input id="nome" type="text">
-            Endereço:<input id="endereco"  type="text">
-            Produto:<input id="produto" type="text">
-            Id_entregador:<input id="id_entre" type="text">
-            <button onclick="cadastrar()">Gerar produto</button>
+
+            <p>Cliente:</p><input id="cliente" type="text">
+
+
+
+            <p>Endereço:</p> <input id="endereco" type="text">
+
+
+
+            <p>Produto:</p><input id="produto" type="text">
+
+
+
+            <p>Id_entregador:</p> <input id="id_entre" type="text">
+
+            <div id="btn">
+
+                <button onclick="cadastrar()">Gerar produto</button>
+
+            </div>
+
         </div>
+
     </header>
+
+    <main>
+        <div class="aaa">
+            <div>
+                <h2>cozinha:</h2>
+            </div>
+            <div>
+                 <h2>entregador:</h2>
+            </div>
+        </div>
+       
+        
+        <div class="all">
+            <div id="global">
+                <div id="etapaone">
+                    <h5>Em excusão</h5>
+                    <p class="id_pedido">Id:1</p>
+
+                    <p class="cliente">Cliente:Maria</p>
+
+                    <p class="h_pedi">Hora do pedido:20:00</p>
+
+                </div>
+
+                <div id="etapatwo">
+
+                    <p class="produto">Produto:X-tudo</p>
+
+                    <p class="data">Data:12/02/2023</p>
+                    <button id="btn">Enviar entrega</button>
+                    <button id="btn">excluir</button>
+                    <button id="btn">alterar</button>
+                </div>
+
+            </div>
+            <div id="global23">
+                <div id="etapaone">
+                    <h5>A caminho</h5>
+                    <p class="id_pedido">Id:1</p>
+
+                    <p class="cliente">Cliente:Maria</p>
+
+                    <p class="h_pedi">Hora do pedido:20:00</p>
+
+                </div>
+
+                <div id="etapatwo">
+
+                    <p class="produto">Produto:X-tudo</p>
+
+                    <p class="data">Data:12/02/2023</p>
+                    <button id="btn">Pedido entregue</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
 </body>
-<script>
-    var urLanches = `http://localhost:5000/bomblanches/criaDor`;
-    var lanches = [];
 
-    function cadastrar(){ 
-        let corpo = {
-        "cliente": document.querySelector("#nome").value,
-        "endereco": document.querySelector("#endereco").value,
-        "produto": document.querySelector("#produto").value ,
-        "id_entregador":document.querySelector("#id_entre").value
-    }
-    const options = {
-        "method": 'POST',
-        "headers": {"Content-Type": 'application/json' }
-    };
-       options.body = JSON.stringify(corpo);
+<script src="script.js"></script>
 
-       //Faz efetivamente a requisição ao back-end
-      //composição alinhado
-       if(corpo.nome != 0 || corpo.endereco != 0 || corpo.produto != 0 || corpo.id_entre != 0){
-        fetch(urLanches, options)
-        .then(resp => resp.status)
-        .then(resp => {
-            if (resp == 201) {
-                 alert('Enviado com sucesso')
-                 window.location.reload();
-                } else {
-                    alert('Erro no cadastramento:' + resp);
-                    window.location.reload();
-                }
-        })
-        .catch(err => alert(err));
-       } else {
-        alert('Preencha os campos obrigatórios');
-    }
-}
 
-</script>
 
 </html>
