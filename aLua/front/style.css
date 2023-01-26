@@ -5,6 +5,7 @@
     padding: 0%;
 
     box-sizing: border-box;
+   
 
 }
 
@@ -15,22 +16,21 @@
 
 div{
 
-    /* background-color: aquamarine; */
-
-    display: flex;
+ 
+    display: block;
 
     align-items: center;
 
     justify-content: center;
 
     margin: 40px;
-
-    display: block;
-
 }
-#info input, p{
 
-    padding: 10px;
+
+#info input, label{
+    display: block;
+    padding: 15px;
+    width: 35vw;
 
 }
 #btn button{
