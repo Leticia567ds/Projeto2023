@@ -17,8 +17,8 @@ CREATE TABLE pedidos(
     produto varchar(140) not null,
     datas DATETIME not null,
     hora_pedido TIME not null,
-    hora_entrega TIME not null,
-    hora_fim TIME not null,
+    hora_entrega TIME null,
+    hora_fim TIME null,
     id_entregador integer not null,
     FOREIGN KEY (id_entregador) REFERENCES entregadores(id_entregador)
 );
@@ -29,7 +29,7 @@ describe pedidos;
 show tables;
 
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projetos23/aLua/docs/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/Suporte/Desktop/aLua/docs/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -38,7 +38,7 @@ IGNORE 1 ROWS;
 
 select * from entregadores;
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projetos23/aLua/docs/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Suporte/Desktop/aLua/docs/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -46,3 +46,6 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 select * from pedidos;
+
+update pedidos set hora_fim = null where hora_fim = "00:00:00";
+update pedidos set hora_entrega = null where id_pedido > 61;
