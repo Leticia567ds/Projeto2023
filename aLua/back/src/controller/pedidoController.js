@@ -2,7 +2,7 @@ const con = require('../dao/lanche.js');
 const pedi = require('../model/pedidoModel.js');
 
 const listarAll = (req, res) => {
-    con.query(pedi.toReadAll(), (err, result) => {
+    con.query(pedi.toRead(), (err, result) => {
         if (err == null) {
             res.status(200).json(result).end()
         }else{

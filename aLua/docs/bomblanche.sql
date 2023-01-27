@@ -15,7 +15,7 @@ CREATE TABLE pedidos(
     cliente varchar(80) not null,
     endereco varchar(170) not null,
     produto varchar(140) not null,
-    datas DATETIME not null,
+    data DATE not null,
     hora_pedido TIME not null,
     hora_entrega TIME null,
     hora_fim TIME null,
@@ -29,7 +29,7 @@ describe pedidos;
 show tables;
 
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Suporte/Desktop/aLua/docs/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projeto2023/aLua/docs/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -38,7 +38,7 @@ IGNORE 1 ROWS;
 
 select * from entregadores;
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Suporte/Desktop/aLua/docs/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projeto2023/aLua/docs/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'

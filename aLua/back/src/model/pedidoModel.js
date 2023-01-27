@@ -1,5 +1,5 @@
-const toReadAll = () => {
-    return `SELECT pedidos.*, entregadores.nome FROM pedidos INNER JOIN entregadores ON pedidos.id_entregador = entregadores.id_entregador`;
+const toRead = () => {
+    return `SELECT * FROM pedidos order by id_pedido desc limit 5`;
 }
 
 const toCreate = (model) => {
@@ -24,7 +24,7 @@ const toUpEntrega = (model) => {
 
 
 module.exports = {
-    toReadAll,
+    toRead,
     toCreate,
     toDelete,
     toUpdate,
