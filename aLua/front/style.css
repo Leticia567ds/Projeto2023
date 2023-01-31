@@ -16,7 +16,12 @@
 
 div{
 
+<<<<<<< HEAD
  
+=======
+    /* background-color: aquamarine; */
+
+>>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
     display: block;
 
     align-items: center;
@@ -24,6 +29,7 @@ div{
     justify-content: center;
 
     margin: 40px;
+<<<<<<< HEAD
 }
 
 
@@ -31,6 +37,17 @@ div{
     display: block;
     padding: 15px;
     width: 35vw;
+=======
+
+    
+
+}
+#info input, label{
+
+    padding: 10px;
+    width: 35vw;
+    display: block;
+>>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
 
 }
 #btn button{
@@ -38,6 +55,7 @@ div{
     padding: 10px;
 
 }
+<<<<<<< HEAD
 /* .all{
     display: flex;
     justify-content: space-around;
@@ -49,23 +67,54 @@ div{
     background-color: rgba(141, 137, 137, 0.534);
     width: 50vh;
     border-radius: 10px;
+=======
+
+
+.conteudo{
+    display:block;
+    width:900;
+    height:600px;
+    /* background-color:#0F0; */
+}
+.motoboy{
+    width:600px;
+    height:300px;
+    float:right;
+    /* background-color: aqua; */
+    margin-top: -2.2rem;
+}
+.motoboy button {
+    margin: 10px;
+   padding: 5px;
+}
+.global button{
+    margin: 10px;
+   padding: 5px;
+>>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
 }
 
-#etapaone h5{
-display: flex;
-align-items: center;
-justify-content: center;
-margin-top: -15px;
-color: red;
-}
-#global23{
-    display: flex;
-    background-color: rgba(141, 137, 137, 0.534);
-    width: 50vh;
+/* .global{
+    background-color: rgba(137, 133, 133, 0.446);
+    width: 30vw;
+    height: 35vh;
     border-radius: 10px;
+} */
+#oi p{
+    padding: 4.5px;
 }
-.aaa{
-    display: flex;
+#oi h5{
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    padding: 10px;
+    color: red;
 }
+#etapaone p{
+    padding: 4.5px;
+}
+#etapaone h5{
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: red;
+}
+

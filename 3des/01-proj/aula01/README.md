@@ -1,0 +1,56 @@
+# Revisão
+- Sistema Básico de Gestão de Pedidos e Entregas
+# Projeto 1 (Entregas) Sistema Full Stack + mobile
+- Requisitos:
+	- Getão: Sistema Web (Front-End) com as funcionalidades:
+		- Cadastrar novo pedido
+		- Visualizar dados de todos os pedidos
+		- Alterar dados do pedido
+		- Excluir pedidos
+	- Cozinha: App (Mobile)
+		- Apenas listar pedidos que estão em execução
+		- Botão que ao ser clicado preenche a hora_entrega com a hora atual e escolhe um entregador aleatoriamente.
+	- Entregador: App (Mobile)
+		- Tela de login para entregador
+		- Listar as entregas
+		- Botão que ao ser clicado preenche a hora_fim e o pedido some da lista
+- WireFrame com as três telas de exemplo:
+	- ./wireframe/gestao.png
+	- ./wireframe/cozinha.png
+	- ./wireframe/entregador.png
+- Dados de teste:
+	- ./dados/entregadores.csv
+	- ./dados/pedidos.csv
+
+# Recomendações (CheckList) da sequência de trabalho
+	- Criar o Banco de dados
+		- DER Conceitual (Cardinalidade: 1 Entregador para Muitos Pedidos)
+		- Escolher como fazer a gestão dos campos de endereço se ficarão juntos ou separados
+		- Desenvolver o script SQL/DDL
+		- Importar os dados dos arquivos CSV para as tabelas do Banco de dados, Ajustar as datas no formato BD
+		- Criar as consultas (Views) para:
+			- listar todos os pedidos
+			- Listar pedidos em execução, com os campos hora_entrega e hora_fim em branco ou nulo ou hora 0:00
+			- Listar pedidos por entregador, com o campo hora_fim em branco ou nulo ou hora 0:00
+	- Desenvolver o Back End
+		- CRUD de pedidos
+		- Login do entregador (Opcional: implementar midware, criptografia de senha)
+		- read das views criadas no Banco de Dado
+	- Desenvolver o Mobile 1 (Cozinha):
+		- Listar apenas os pedidos em execução:
+		- Criar um botão para cada pedido que envia para entrega
+	- Desenvolver o Mobile 2 (Entregas=dor)
+		- Tela de login
+		- Tela que lista os pedidos em entrega para o entregador que fex login.
+		- Criar um botão para cada pedido que finaliza a entrega.
+	- Desenvolver a Front-End.
+		- 4 Funcionalidades CRUD para pedidos
+		- Listar todos os pedidos
+		- Listar pedidos em execução
+		- Listar pedidos em entrega
+		- Opcionais
+			- funcionalidades CRUD para entregador
+			- Listar todos
+			- Criar um dashboard de pedidos com excel
+			- Criar um dashboard de pedidos com JavaScript
+		

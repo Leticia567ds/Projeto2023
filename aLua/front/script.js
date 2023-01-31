@@ -1,7 +1,9 @@
 const urLanches = 'http://localhost:5000/bomblanches/criaDor';
-const urListar = 'http://localhost:5000/bomblanches/dor';
-const corpo = document.querySelector(".all");
+const urListar = 'http://localhost:5000/bomblanches/listar';
+const corpo = document.querySelector(".conteudo");
 var listar = [];
+const shortDate = new Date("2015-03-25");
+const shortFunciona = new Date ("02/24/2022");
 
 const min = 5;
 
@@ -21,14 +23,19 @@ fetch(urListar, options)
 }
 
 const lista = () => {
+    
     listar.forEach(e => {
+     
            let glob = document.querySelector(".global").cloneNode(true);
            glob.classList.remove("modelo");
            
             glob.querySelector("#id_pedido").innerHTML += e.id_pedido;
 
            glob.querySelector("#cliente").innerHTML += e.cliente;
+           glob.querySelector("#produto").innerHTML += e.produto;
            glob.querySelector("#h_pedi").innerHTML += e.hora_pedido;
+        
+           glob.querySelector("#data").innerHTML += e.data.toLocaleString('pt-BR', { timeZone: 'UTC' }).split('T')[0];
 
           corpo.appendChild(glob)
        
