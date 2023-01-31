@@ -16,12 +16,9 @@
 
 div{
 
-<<<<<<< HEAD
- 
-=======
     /* background-color: aquamarine; */
 
->>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
+
     display: block;
 
     align-items: center;
@@ -29,7 +26,6 @@ div{
     justify-content: center;
 
     margin: 40px;
-<<<<<<< HEAD
 }
 
 
@@ -37,37 +33,27 @@ div{
     display: block;
     padding: 15px;
     width: 35vw;
-=======
-
-    
-
 }
-#info input, label{
 
-    padding: 10px;
-    width: 35vw;
-    display: block;
->>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
 
-}
 #btn button{
 
     padding: 10px;
 
 }
-<<<<<<< HEAD
 /* .all{
     display: flex;
     justify-content: space-around;
     align-items: center;
     
 } */
+
 .global{
-    display: flex;
+    /* display: flex; */
     background-color: rgba(141, 137, 137, 0.534);
     width: 50vh;
     border-radius: 10px;
-=======
+}
 
 
 .conteudo{
@@ -90,7 +76,7 @@ div{
 .global button{
     margin: 10px;
    padding: 5px;
->>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
+
 }
 
 /* .global{
@@ -99,14 +85,23 @@ div{
     height: 35vh;
     border-radius: 10px;
 } */
+#oi{
+    background-color: rgba(141, 137, 137, 0.534);
+    width: 55vh;
+    border-radius: 10px;
+}
 #oi p{
     padding: 4.5px;
+    margin-left:23px;
+    /* margin: 10px; */
 }
 #oi h5{
-    align-items: center;
-    justify-content: center;
+    margin-left:20px;
     padding: 10px;
     color: red;
+}
+#oi button{
+    margin-left:24px;
 }
 #etapaone p{
     padding: 4.5px;

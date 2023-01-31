@@ -1,5 +1,5 @@
 const urLanches = 'http://localhost:5000/bomblanches/criaDor';
-const urListar = 'http://localhost:5000/bomblanches/listar';
+const urListar = 'http://localhost:5000/bomblanches/dor';
 const corpo = document.querySelector(".conteudo");
 var listar = [];
 const shortDate = new Date("2015-03-25");
@@ -110,3 +110,4 @@ function cadastrar() {
     }
 
 }
+

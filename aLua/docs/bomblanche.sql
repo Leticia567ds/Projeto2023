@@ -29,11 +29,8 @@ describe pedidos;
 show tables;
 
 ---------------------------
-<<<<<<< HEAD
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Projeto2023/aLua/docs/entregadores.csv'
-=======
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projeto2023/aLua/docs/entregadores.csv'
->>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
+
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Senai2023/aLua/docs/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -42,11 +39,7 @@ IGNORE 1 ROWS;
 
 select * from entregadores;
 ---------------------------
-<<<<<<< HEAD
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Projeto2023/aLua/docs/pedidos.csv'
-=======
-LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projeto2023/aLua/docs/pedidos.csv'
->>>>>>> 04e0f691b24447c3bbe62bd4340006fde3bee866
+LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Senai2023/aLua/docs/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
