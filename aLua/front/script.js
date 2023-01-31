@@ -8,6 +8,9 @@ const shortFunciona = new Date ("02/24/2022");
 const min = 5;
 
 
+function finalizar(){
+    
+}
 
 const carregar = () => { 
  const options = { method: 'GET' }; 
