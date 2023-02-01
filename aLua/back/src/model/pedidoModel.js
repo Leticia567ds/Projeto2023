@@ -10,10 +10,14 @@ const toDelete= (model) => {
     return `DELETE FROM pedidos WHERE id_pedido='${model.id_pedido}'`;
 }
 
-const toUpdate = (model) => {
-    return `UPDATE pedidos SET cliente = '${model.cliente}', endereco = '${model.endereco}', produto = '${model.produto}' WHERE id_pedido = ${model.id_pedido}`;
-}
+const toReadCaminho = () => {
+    return `SELECT * FROM vw_caminho order by id_pedido desc limit 5`;
+};
 
+
+const toUpdate = (model) => {
+    return `UPDATE pedidos SET cliente = '${model.cliente}',endereco ='${model.endereco}', produto = '${model.produto}',id_entregador = ${model.id_entregador} WHERE id_pedido = ${model.id_pedido}`;
+}
 const toUpdateCozinha = (model) => {
     return `UPDATE pedidos SET hora_entrega = curtime() WHERE id_pedido = ${model.id_pedido}`;
 }
@@ -29,5 +33,6 @@ module.exports = {
     toDelete,
     toUpdate,
     toUpdateCozinha,
-    toUpEntrega
+    toUpEntrega,
+    toReadCaminho
 }

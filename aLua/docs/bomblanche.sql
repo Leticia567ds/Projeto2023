@@ -30,7 +30,7 @@ show tables;
 
 ---------------------------
 
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Senai2023/aLua/docs/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projeto2023/aLua/docs/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -39,7 +39,7 @@ IGNORE 1 ROWS;
 
 select * from entregadores;
 ---------------------------
-LOAD DATA INFILE 'C:/Users/Desenvolvimento/Desktop/Senai2023/aLua/docs/pedidos.csv'
+LOAD DATA INFILE 'C:/Users/Usuario 10/Desktop/Projeto2023/aLua/docs/pedidos.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
@@ -48,5 +48,10 @@ IGNORE 1 ROWS;
 
 select * from pedidos;
 
-update pedidos set hora_fim = null where hora_fim = "00:00:00";
-update pedidos set hora_entrega = null where id_pedido > 61;
+
+drop view if exists vw_caminho;
+create view vw_caminho AS 
+SELECT e.nome,p.id_pedido,p.cliente,p.endereco, p.produto,p.data,p.hora_pedido, p.hora_entrega, p.hora_fim
+FROM entregadores e INNER JOIN pedidos p
+ on e.id_entregador = p.id_entregador
+WHERE  p.hora_fim = "00:00:00";

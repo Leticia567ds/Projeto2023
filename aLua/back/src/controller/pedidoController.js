@@ -11,6 +11,16 @@ const listarAll = (req, res) => {
     })
 }
 
+const listarCaminho = (req, res) =>  {
+    con.query(pedi.toReadCaminho(), (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+}
+
 const criarPedido = (req, res) => {
     con.query(pedi.toCreate(req.body), (err, result) => {
         if (err == null) {
@@ -35,15 +45,16 @@ const ExcluirPedido = (req, res) => {
 
 const UpdatePedido = (req, res) => {
     con.query(pedi.toUpdate(req.body), (err, result) => {
-        if (err == null)
-            if (result.affectedRows > 0)
-                res.status(204).end();
-            else
-                res.status(404).end();
-        else
-            res.status(400).json(err).end();
-    });
+        if (err == null) {
+            res.status(201).json(req.body).end();
+        }else{
+            res.status(500).json(err).end();
+        }
+    })
 }
+
+
+
 
 const UpCozinha = (req, res) => {
     con.query(pedi.toUpdateCozinha(req.body), (err, result) => {
@@ -76,5 +87,6 @@ module.exports = {
     UpdatePedido,
     ExcluirPedido,
     UpCozinha,
-    UpEntrega
+    UpEntrega,
+    listarCaminho
 }
