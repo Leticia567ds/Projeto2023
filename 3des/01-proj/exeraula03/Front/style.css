@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Solitreo&display=swap');
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+header{
+    background-color: rgb(230, 135, 230);
+    height: 15vh;
+}
+body{
+    background-color: rgba(218, 194, 242, 0.729);
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    font-size: 50px;
+    color: antiquewhite;
+    font-family: 'Solitreo', cursive;
+    animation-duration: 2s;
+    animation-name: slidein;
+    
+}
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
+.info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-size: 25px;
+    color: rgb(71, 5, 75);
+}
+.cadas{
+    padding:0 15px;
+    margin: 30px;
+}
+.cadas input{
+    padding: 10px;
+    width: 30vw;
+}
+.cadas p{
+    font-size:22px ;
+    padding: 9.1px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.titulo{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+}
+button{
+    padding: 10px;
+}
