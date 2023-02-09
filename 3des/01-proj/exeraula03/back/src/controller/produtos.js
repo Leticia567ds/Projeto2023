@@ -21,11 +21,12 @@ const read = async (req, res) => {
         }
         
     });
-
     res.status(200).json(produtos).end();
 }
+
 
 module.exports = {
     create,
     read
+   
 }

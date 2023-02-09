@@ -15,9 +15,15 @@ const read = async (req, res) => {
         select: {
             nome: true,
             salario: true,
-            setor_id_vendedor: true
+            setor_id_vendedor: true,
+            vendas:{
+            select:{
+                data: true,
+                id_vendedor: true
         }
-    });
+    }
+}
+});
 
     res.status(200).json(vendedor).end();
 }

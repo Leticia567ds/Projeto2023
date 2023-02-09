@@ -25,10 +25,12 @@ router.post('/vendas/create', Vendas.create);
 router.get('/vendas', Vendas.read)
 router.put('/vendas/:id', Vendas.update)
 router.delete('/vendas/:id', Vendas.remove)
+router.get('/vendas/:id', Vendas.readOne)
 
 router.post('/detalhes/create', Detalhes.create);
 router.get('/detalhes', Detalhes.read)
 router.put('/detalhes/:id', Detalhes.update)
 router.delete('/detalhes/:id', Detalhes.remove)
+
 
 module.exports = router;

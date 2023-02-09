@@ -16,6 +16,7 @@ const read = async (req, res) => {
     res.status(200).json(detalhes).end();
 }
 
+
 const update = async (req, res) => {
 
     const detalhes = await prisma.Detalhes.update({

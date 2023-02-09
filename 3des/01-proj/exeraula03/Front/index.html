@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon"  href="img/1.png">
+    <link rel="shortcut icon" href="img/1.png">
     <title>ching-ling</title>
 </head>
-<body>
+
+<body onload="pedidosCaminho()">
     <header>
-      <h1>Loja da Osmará ching-ling</h1>
+        <h1>Loja da Osmará ching-ling</h1>
     </header>
     <main>
-        <div class="info">
-            <h2>Aréa dos Vendedores</h2>
+        <div class="form1  modelo">
+            <div>
+                <p>Nome do produto :</p>
+                <input type="text">
+                <p>Valor do produto :</p>
+                <input type="text">
+                <div class="btn">
+                    <button>Cadastrar</button>
+                </div>
+
+            </div>
+
         </div>
 
+        <div class="form2">
+            <div>
+                <p>Data :</p>
+                <input type="text">
+                <p>Quantidade :</p>
+                <input type="text">
+                <div class="btn">
+                    <button>Cadastrar</button>
+                </div>
 
-        <div>
-      
+            </div>
+
         </div>
+        <div class="oi">
+            <button>Ver Relatorio</button>
+        </div>
+
     </main>
 </body>
+<script src="index.js"></script>
 </html>

@@ -42,8 +42,8 @@ model Vendas{
    id  Int  @id @default(autoincrement())
    data DateTime
    id_vendedor Int
-   Vendas Vendedor @relation(fields: [id_vendedor], references: [id])
-   veds Detalhes[]
+   Vendedores Vendedor @relation(fields: [id_vendedor], references: [id])
+   detalhes Detalhes[]
 }
 
 model Detalhes{
