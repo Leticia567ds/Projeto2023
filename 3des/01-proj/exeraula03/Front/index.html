@@ -10,43 +10,39 @@
     <title>ching-ling</title>
 </head>
 
-<body onload="pedidosCaminho()">
+<body>
     <header>
-        <h1>Loja da Osmará ching-ling</h1>
+        <h1>About Vendedores</h1>
     </header>
     <main>
-        <div class="form1  modelo">
-            <div>
-                <p>Nome do produto :</p>
-                <input type="text">
-                <p>Valor do produto :</p>
-                <input type="text">
-                <div class="btn">
-                    <button>Cadastrar</button>
-                </div>
-
-            </div>
-
-        </div>
 
         <div class="form2">
-            <div>
-                <p>Data :</p>
-                <input type="text">
-                <p>Quantidade :</p>
-                <input type="text">
+            <div class="info">
+                <p>Nome :</p>
+                <input id="nome" type="text">
+                <p>Salario :</p>
+                <input id="valor" type="text">
+                <p>Setor Id:</p>
+                <input id="slr" type="text">
                 <div class="btn">
-                    <button>Cadastrar</button>
+                    <button onclick="cadastrar()">Cadastrar</button>
                 </div>
-
             </div>
+            
+            <div class="listar">
+                <label><p>Nome :</p></label>
+             
+                <p>Salario :</p>
+         
+                <p>Setor Id:</p>
 
+                <p>Vendas</p>
+                
+            </div>
+     
         </div>
-        <div class="oi">
-            <button>Ver Relatorio</button>
-        </div>
-
     </main>
 </body>
 <script src="index.js"></script>
+
 </html>

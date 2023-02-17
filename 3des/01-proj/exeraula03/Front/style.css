@@ -11,7 +11,8 @@
 } */
 body{
     
-    background: linear-gradient(333deg, rgba(53,124,109,1) 2%, rgba(45,153,158,1) 47%, rgba(56,65,107,1) 100%);
+    background-color:rgba(53,124,158,1);
+
 }
 
 h1{
@@ -30,46 +31,28 @@ h1{
     display: none;
 }
 
-.form1{
+.listar{
 display: flex;
 align-items: center;
 justify-content: center;
 }
-
 .form2{
     display: flex;
     align-items: center;
-    justify-content: center;
- }
- .form2 p{
-    color:rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    margin: 10px;
- }
- .form2 input{
-     padding: 10px;
-     width: 25vw;
-     border: 1px solid  rgba(200, 96, 214, 0.751);
-     border-radius: 10px;
-    
- }
-
-.form1 p{
-   color:rgb(255, 255, 255);
-   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-   font-size: 20px;
-   margin: 10px;
+    justify-content: space-around;
+    color: aliceblue;
 }
-.form1 input{
+.info p {
+    color: aliceblue;
+}
+.info input{
     padding: 10px;
     width: 25vw;
-    border: 1px solid  rgba(200, 96, 214, 0.751);
-    border-radius: 10px;
-   
 }
 
-button{
+
+
+/* button{
     padding: 15px;
     width: 10vw;
     background-color: rgba(200, 96, 214, 0.31);
@@ -84,15 +67,9 @@ button:hover{
 .btn{
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: 10px;
-}
-.oi{
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    margin: 10rem; 
-}
+    justify-content: center; */
+    /* margin: 10px; */
+/* } */
 /* @keyframes slidein {
     from {
       margin-left: 100%;

@@ -1,0 +1,33 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.modelo{
+visibility: hidden;
+display: none;
+}
+
+.oi{
+display: flex;
+align-items: center;
+justify-content: space-around;
+margin: 10vw;
+}
+.info p{
+    padding: 10px;
+}
+.info input{
+    padding: 10px;
+    width: 20vw;
+}
+
+.cadastrado p {
+    padding: 10px;
+}
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}

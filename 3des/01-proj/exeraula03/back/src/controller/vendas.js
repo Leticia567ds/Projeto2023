@@ -2,36 +2,38 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
+
 const create = async (req, res) => {
-    // var info = req.body;
+    let { id_vendedor } = req.body;
 
-    // info.data = new Date(req.body.data)
-    vendas ={
-        data: req.body.data,
-        Detalhes:{
-           
-             quantidade: req.body.quantidade
-        }
-    }
-    res.status(200).json(vendas).end();
-}
-
-const read = async (req, res) => {
-    let vendas = await prisma.Vendas.findMany({
-        select: {
-            data: true,
-          detalhes:true
+    let venda = await prisma.vendas.create({
+        data: {
+            id_vendedor,
+            data: new Date(),
+            detalhes: {
+                create: req.body.detalhes
+            }
         }
     });
 
-    res.status(200).json(vendas).end();
+    res.status(200).json(venda).end();
 }
 
-const readOne = async (req, res) => {
-    let vendas = await prisma.Vendas.findUnique({
-        where: {
-            id: Number(req.params.id)
-        }, 
+
+
+// const read = async (req, res) => {
+//     let vendas = await prisma.Vendas.findMany({
+//         select: {
+//             data: true,
+//           detalhes:true
+//         }
+//     });
+
+//     res.status(200).json(vendas).end();
+// }
+
+const read = async (req, res) => {
+    let vendas = await prisma.Vendas.findMany({ 
         select: {
             data: true,
             Vendedores: {
@@ -90,5 +92,5 @@ module.exports = {
     read,
     update,
     remove,
-    readOne
+    // readOne
 }
