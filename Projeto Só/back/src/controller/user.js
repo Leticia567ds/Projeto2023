@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
+const jwb = require('jsonwebtoken');
 
 const create = async (req, res) => {
     let usuario = await prisma.Login.create({
@@ -38,14 +39,40 @@ const login = async (req, res) => {
             cargo: true
         }
     })
+    jwb.sign(usuario[0], process.env.KEY, { expiresIn: '4h' },function(err, token) {
+        console.log(err)
+        if(err == null) {
+            usuario[0]["token"] = token;
+            res.status(200).json(usuario[0]).end();
+        }else {
+            res.status(404).json(err).end();
+        }
+    })
+}
 
-    //SELECT id, nome FROM usuario WHERE email = '' AND senha = ''
-    
-    res.status(200).json(usuario[0]).end();
+const update = async (req, res) => {
+    const usuario = await prisma.user.update({
+        where: {
+            id: Number(req.params.id)
+        },
+        data: req.body
+    })
+    res.status(202).json(usuario).end();
+}
+
+const del = async (req, res) => {
+    const usuario = await prisma.user.delete({
+        where: {
+            id: Number(req.params.id)
+        }
+    })
+    res.status(204).end();
 }
 
 module.exports = {
     login,
     read,
-    create
+    create,
+    update,
+    del
 }
