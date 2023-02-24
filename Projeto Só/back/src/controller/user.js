@@ -1,7 +1,9 @@
 const { PrismaClient } = require('@prisma/client');
 
-const prisma = new PrismaClient();
 const jwb = require('jsonwebtoken');
+
+const prisma = new PrismaClient();
+
 
 const create = async (req, res) => {
     let usuario = await prisma.Login.create({
@@ -39,6 +41,7 @@ const login = async (req, res) => {
             cargo: true
         }
     })
+    console.log(usuario[0])
     jwb.sign(usuario[0], process.env.KEY, { expiresIn: '4h' },function(err, token) {
         console.log(err)
         if(err == null) {

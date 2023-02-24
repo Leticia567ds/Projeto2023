@@ -17,16 +17,13 @@ model Login{
   email String
   senha String
   cargo String
-  Motorista motorista[]
 }
 
 model motorista{
   id  Int  @id @default(autoincrement())
-  id_user Int
   nome String
   CNH String
   CPF String
-  User Login @relation(fields: [id_user], references: [id], onDelete: Cascade)
   Motor operacaoVeicular[]
   }
 
@@ -42,7 +39,7 @@ model frota{
 model manutencaoVeicular{
    id  Int  @id @default(autoincrement())
    id_veic Int
-   dataI DateTime
+   dataI DateTime @default(now())
    dataF DateTime?
    valor Float
    descricao String
@@ -54,8 +51,7 @@ model operacaoVeicular{
    id  Int  @id @default(autoincrement())
    id_motor Int
    id_veic Int
-   nomeM String
-   dataS DateTime
+   dataS DateTime @default(now())
    dataR DateTime?
    descricao String
    Motorista motorista @relation(fields: [id_motor], references: [id])

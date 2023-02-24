@@ -1,25 +1,81 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
-.mae{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    margin-top: 45rem;
+body {
+  background-color: green;
 }
-.header{
-    padding: 60px;
+.mae {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 25rem;
+}
+.header {
+  padding: 60px;
+}
+.header h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  /* font-family: 'Gloock', serif; */
+  color: rgb(32, 225, 14);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #ffffff;
+}
+.img {
+  width: 25vw;
+}
+.btn button {
+  align-items: center;
+  margin: 35px;
+  padding: 15px;
+  width: 8vw;
+  background-color: rgba(16, 94, 19, 0.824);
+  border-radius: 20px;
+  color: rgb(252, 254, 255);
+  font-size: 35px;
+  border: none;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form p,
+input {
+  font-size: 50px;
+}
+form p {
+  font-size: 40px;
+  color: #0f3b15;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 20px;
+}
+form input {
+    
+   background-color: #7dce448b;
+  border-radius: 20px;
+  border: 1px solid rgb(128, 214, 7);
+}
+form {
+  background-color: #ffffff;
+  width: 25vw;
+  height: 40vh;
+  border-radius: 15px;
 }
 
-.info{
-    display: block;
-    align-items: center;
-    justify-content:center;
-    background-color: blanchedalmond;
-    border-radius: 20px;
-    width: 20vw;
-    height: 35vh;
+.mtv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-
+.mtv p {
+  font-size: 35px;
+  font-family: "Gloock", serif;
+  color: #a3faae;
+}

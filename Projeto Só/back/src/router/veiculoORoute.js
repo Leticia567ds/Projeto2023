@@ -2,10 +2,10 @@ const express = require('express');
 
 const router = express.Router();
 
-const vm = require('../controller/veicularM');
+const vm = require('../controller/veicularO');
 
-router.post('/registrar', vm.create);
-router.get('/registrar', vm.read);
+router.post('/operacao/', vm.create);
+router.get('/operacao', vm.read);
 
 
 module.exports = router;

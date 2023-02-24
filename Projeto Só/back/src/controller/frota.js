@@ -18,17 +18,19 @@ const read = async (req, res) => {
 }
 
 const update = async (req, res) => {
-    let frota = await prisma.frota.update({
+    const frota = await prisma.frota.update({
+        where: {
+            id: Number(req.params.id)
+        },
         data: req.body
-    });
-
-    res.status(200).json(frota).end();
+    })
+    res.status(202).json(frota).end();
 }
 
 const remove = async (req, res) => {
-    let frota = await prisma.frota.delete({
+    const frota = await prisma.frota.delete({
         where: {
-            id: req.params.id
+            id: Number(req.params.id)
         }
     });
 

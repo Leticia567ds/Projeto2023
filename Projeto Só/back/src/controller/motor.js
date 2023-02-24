@@ -2,7 +2,6 @@ const { PrismaClient } = require('@prisma/client');
 
 const prisma = new PrismaClient();
 
-
 const create = async (req, res) => {
     let motorista = await prisma.motorista.create({
         data: req.body
@@ -19,6 +18,9 @@ const read = async (req, res) => {
 
 const update = async (req, res) => {
     let motorista = await prisma.motorista.update({
+        where: {
+            id: Number(req.params.id)
+        },
         data: req.body
     });
 
@@ -28,7 +30,7 @@ const update = async (req, res) => {
 const remove = async (req, res) => {
     let motorista = await prisma.motorista.delete({
         where: {
-            id: req.params.id
+            id: Number(req.params.id)
         }
     });
 
