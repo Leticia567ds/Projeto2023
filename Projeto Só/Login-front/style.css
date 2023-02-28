@@ -1,81 +1,84 @@
-@import url("https://fonts.googleapis.com/css2?family=Gloock&display=swap");
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
 body {
-  background-color: green;
+	background-color: #659B5D;
+ 
 }
-.mae {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 25rem;
-}
-.header {
-  padding: 60px;
-}
-.header h1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 90px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  /* font-family: 'Gloock', serif; */
-  color: rgb(32, 225, 14);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #ffffff;
-}
-.img {
-  width: 25vw;
-}
-.btn button {
-  align-items: center;
-  margin: 35px;
-  padding: 15px;
-  width: 8vw;
-  background-color: rgba(16, 94, 19, 0.824);
-  border-radius: 20px;
-  color: rgb(252, 254, 255);
-  font-size: 35px;
-  border: none;
-}
-.btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-form p,
-input {
-  font-size: 50px;
-}
-form p {
-  font-size: 40px;
-  color: #0f3b15;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  padding: 20px;
-}
-form input {
-    
-   background-color: #7dce448b;
-  border-radius: 20px;
-  border: 1px solid rgb(128, 214, 7);
-}
-form {
-  background-color: #ffffff;
-  width: 25vw;
-  height: 40vh;
-  border-radius: 15px;
+.mae{
+width: 100vw;
+height: 59vh;
+display: flex;
+align-items: center;
+justify-content: center;
 }
 
-.mtv {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.box{
+  width: 30vw;
+  
 }
-.mtv p {
-  font-size: 35px;
-  font-family: "Gloock", serif;
-  color: #a3faae;
+.filho
+{
+  margin-top: 20vh;
+  width: 35vw;
+}
+
+.filho h1{
+  font-size: 50px;
+  color: #ffffff;
+}
+.filho h2{
+  font-size: 45px;
+  color:#DAF7A6 ;
+}
+.filho img{
+  width: 28vw;
+  /* height: 48vh; */
+}
+
+.login-box {
+	width: 500px;
+	background-color: #fff;
+	color: #000;
+	margin-top: 20vh;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #8ec22d95 
+}
+
+.login-box h2 {
+  color:  #788f4cde;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.login-box label {
+  color:  #435522fc;
+	font-weight: bold;
+	display: block;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: none;
+	border-bottom: 1px solid #2a3d0695;
+}
+
+.login-box input[type="submit"] {
+	background-color: #67970ffa;
+	color: #fff;
+	border: none;
+	padding: 10px;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.login-box input[type="submit"]:hover {
+	background-color: #066a09e4;
 }
