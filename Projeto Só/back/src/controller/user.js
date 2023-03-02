@@ -28,6 +28,7 @@ const read = async (req, res) => {
 }
 
 const login = async (req, res) => {
+    console.log(req.body)
     let usuario = await prisma.Login.findMany({
         where: {
             AND: [
@@ -41,9 +42,9 @@ const login = async (req, res) => {
             cargo: true
         }
     })
-    console.log(usuario[0])
+    
     jwb.sign(usuario[0], process.env.KEY, { expiresIn: '4h' },function(err, token) {
-        console.log(err)
+        
         if(err == null) {
             usuario[0]["token"] = token;
             res.status(200).json(usuario[0]).end();
