@@ -37,7 +37,7 @@ form.addEventListener('submit', function(e) {
 
                 localStorage.setItem("info", JSON.stringify(data));
                 alert('Login realizado com sucesso!');
-                window.location.href = 'love.html';
+                window.location.href = '../motor-front/index.html';
               
     })
 })

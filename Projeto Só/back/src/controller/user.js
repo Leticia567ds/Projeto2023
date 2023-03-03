@@ -43,7 +43,7 @@ const login = async (req, res) => {
         }
     })
     
-    jwb.sign(usuario[0], process.env.KEY, { expiresIn: '4h' },function(err, token) {
+    jwb.sign(usuario[0], process.env.KEY, { expiresIn: '10h' },function(err, token) {
         
         if(err == null) {
             usuario[0]["token"] = token;
