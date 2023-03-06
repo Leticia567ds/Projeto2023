@@ -9,6 +9,8 @@ body {
 }
 .header {
   display: flex;
+  justify-content: space-around;
+  padding: 35px;
   background-color: rgb(255, 255, 255);
   /* width:100vw; */
   height: 10vh;
@@ -25,7 +27,7 @@ main {
 }
 .card {
   width: 310px;
-  height: 200px;
+  height: 315px;
   background-color: #fff;
   margin: 30px;
   padding: 20px;
@@ -55,5 +57,5 @@ main {
 }
 .model{
   visibility: hidden;
-  display: none;
+  display: none!important;
 }
