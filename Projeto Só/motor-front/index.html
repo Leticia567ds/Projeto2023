@@ -14,7 +14,7 @@
         <p>Página do motorista</p>
         <p>Página de frotas</p>
         <div>
-            <button>Cadastrar</button>
+            <button class="cadastrar" onclick='abrirModalCadastro()'>Cadastrar</button>
         </div>
     </header>
     <main>
@@ -22,20 +22,44 @@
             <div class="card model">
                 <p id="id">Id: </p>
                 <p id="name">Nome: </p>
-                <p class="content">Conteúdo oculto.Insira a senha para visualizar.</p>
-                <label for="pass">Senha:</label>
+                <p id="cnh">CNH: </p>
+                <p id="cpf">CPF: </p>
+                <button class="btn" onclick="abrirModal()">Editar</button>
+                <button class="btn" id="del">Deletar</button>
+            </div>
+        </div>
 
-                <input type="password" id="pass"/>
-                
-                <button id='btn'>Mostrar conteúdo</button>
-                <div class="hidden-content model">
-                    <p id="cnh">CNH: </p>
-                    <p id="cpf">CPF: </p>
-                    <button>excluir</button>
-                    <button>editar</button>
+        <div class="modal cadastrar model">
+            <div class="modal-content">
+                <div class="modal-content-body">
+                    <input type="text" class="input" id="nomec" placeholder="nome">
+                    <input type="text" class="input" id="cnhc" placeholder="cnh">
+                    <input type="text" class="input" id="cpfc" placeholder="cpf">
+                </div>
+                <div class="modal-content-footer">
+                    <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+                    <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
                 </div>
             </div>
         </div>
+
+
+
+        <div class="modal editar model">
+            <div class="modal-content">
+                <div class="modal-content-body">
+                    <input type="text" class="input" id="idp" placeholder="id" readonly>
+                    <input type="text" class="input" id="nomep" placeholder="nome">
+                    <input type="text" class="input" id="cnhp" placeholder="cnh">
+                    <input type="text" class="input" id="cpfp" placeholder="cpf">
+                </div>
+                <div class="modal-content-footer">
+                    <button onclick="alterar()"  class="btn confirm">Alterar</button>
+                    <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 
 </body>
