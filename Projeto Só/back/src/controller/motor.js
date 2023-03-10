@@ -7,7 +7,6 @@ const create = async (req, res) => {
         data: req.body
         
     });
-    console.log(motorista);
     res.status(200).json(motorista).end();
 }
 

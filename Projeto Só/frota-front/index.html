@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../geral/style.css">
-    <title>Document</title>
+    <title>Frota</title>
 </head>
 
 <body onload="carregar()">
     <header class="header">
         <nav>
             <ul>
-                <li><a href="../frota-front/index.html">Frota</a></li>
+                <li><a href="../motor-front/index.html">Motoristas</a></li>
                 <li><a href="">Manutenção</a></li>
                 <li><a href="">Operações</a></li>
             </ul>
@@ -24,36 +24,39 @@
         </div>
     </header>
     <main>
-        <!-- ---------------------------------------------- listar ---------------------------------------------- -->
         <div class="box">
-            <div class="card model">
+            <div class="card Jeck">
                 <p id="id">Id: </p>
-                <p id="name">Nome: </p>
-                <p id="cnh">CNH: </p>
-                <p id="cpf">CPF: </p>
+                <p id="placa">Placa: </p>
+                <p id="modelo">Modelo: </p>
+                <p id="marca">Marca: </p>
                 <button class="btn" onclick="abrirModal()">Editar</button>
                 <button class="btn" id="del">Deletar</button>
             </div>
         </div>
-        <!-- ---------------------------------------------- Cadastrar ---------------------------------------- -->
 
-        <div class="modal cadastrar model">
+        <!-- ---------------------------------------------- Cadastrar ---------------------------------------------- -->
+
+        <div class="modal cadastrar Jec">
             <div class="modal-content">
+
                 <div class="modal-content-body">
-                    <input type="text" class="input" id="nomec" placeholder="nome">
-                    <input type="text" class="input" id="cnhc" placeholder="cnh">
-                    <input type="text" class="input" id="cpfc" placeholder="cpf">
+                    <input type="text" class="input" id="placap" placeholder="placa">
+                    <input type="text" class="input" id="modelop" placeholder="modelo">
+                    <input type="text" class="input" id="marcap" placeholder="marca">
                 </div>
                 <div class="modal-content-footer">
-                    <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
-                    <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+                    <button class="confirm" id="cadastro" onclick="cadastrarVeiculo()">Enviar</button>
+                    <button class="cancel" onclick="fecharModalCadastro()">Cancelar</button>
                 </div>
             </div>
         </div>
 
-        <!-- ---------------------------------------------- alterar ---------------------------------------------- -->
 
-        <div class="modal editar model">
+
+
+        <!-- 
+        <div class="modal editar ">
             <div class="modal-content">
                 <div class="modal-content-body">
                     <input type="text" class="input" id="idp" placeholder="id" readonly>
@@ -66,10 +69,9 @@
                     <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </main>
-
 </body>
 <script src="index.js"></script>
 

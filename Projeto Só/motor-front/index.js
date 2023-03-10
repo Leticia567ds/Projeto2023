@@ -10,7 +10,6 @@ var card = document.querySelector(".card");
 const corpo = document.querySelector(".box");
 var listar = [];
 
-
 const carregar = () => {
   var btn = document.querySelector("#btn");
   const options = { method: "GET" };
@@ -69,9 +68,10 @@ function abrirModalCadastro() {
   btCadedit.onclick = () => {
     cadastrar();
   };
-  document.querySelector("#nomec").value = "";
-  document.querySelector("#cpfc").value = "";
-  document.querySelector("#cnhc").value = "";
+  // document.querySelector("#nomec").value = "";
+  // document.querySelector("#cpfc").value = "";
+  // document.querySelector("#cnhc").value = "";
+  console.log(cada);
   cada.classList.remove("model");
 }
 
@@ -125,31 +125,33 @@ function alterar() {
 }
 
 function cadastrar() {
-  let corpo = {
-    nome: document.querySelector("#nomec").value,
-    CNH: document.querySelector("#cnhc").value,
-    CPF: document.querySelector("#cpfc").value,
-  };
-  const token = JSON.parse(localStorage.getItem("info")).token;
-  const options = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Bearer: token,
-    },
-    body: JSON.stringify(corpo),
-  };
+  let nome = document.querySelector("#nomec").value;
+  let cnh = document.querySelector("#cnhc").value;
+  let cpf = document.querySelector("#cpfc").value;
 
-  fetch("http://localhost:3000/motorista", options)
-    .then((resp) => {
-      return resp.json();
-    })
-    .then((data) => {
-      if (data.id != undefined) {
-        window.location.reload();
-      } else {
-        alert("Erro ao cadastrar");
-      }
-    })
-    .catch((err) => alert(err));
+  let corpo = {
+    "nome":nome,
+    "CNH": cnh,
+    "CPF": cpf
+  };
+  // const token = 
+
+  let options = {
+    "method": "POST",
+    "headers": {
+        "content-type": "application/json",
+        "Bearer":JSON.parse(localStorage.getItem("info")).token
+    },
+    "body": JSON.stringify(corpo)
+};
+
+fetch("http://localhost:3000/motorista", options)
+.then((res) => {
+  if (res.status == 200) window.location.reload();
+  else console.log(res); // Exibe a resposta completa no console
+  return res.json();
+})
+.catch((error) => {
+  console.error("Fetch error:", error);
+});
 }

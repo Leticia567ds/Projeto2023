@@ -1,4 +1,3 @@
-
 .box {
   display: flex;
   width: 100%;
@@ -34,15 +33,18 @@
 .card button:hover {
   background-color: #195a0ad1;
 }
-.model {
+
+.Jeck {
+  visibility: hidden;
+  display: none !important;
+}
+
+.Jec {
   visibility: hidden;
   display: none !important;
 }
 
 
-.icone {
-  width: 20px;
-}
 .modal {
   display: flex;
   position: fixed;
@@ -64,6 +66,8 @@
   padding: 20px 40px;
   justify-content: space-evenly;
 }
+
+
 
 .modal-content-footer {
   display: flex;
@@ -87,26 +91,3 @@ input {
   margin: 5px;
 }
 
-.cancel {
-  /* margin: 10px; */
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  background-color: #fa2828;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
-.cancel:hover {
-  background-color: #fe0000;
-}
-.confirm:hover {
-  background-color: #0c4d1c;
-}
-.confirm {
-  padding: 10px;
-  color: white;
-  border-radius: 5px;
-  background-color: #206d33;
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-}
