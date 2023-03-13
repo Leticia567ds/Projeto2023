@@ -1,0 +1,39 @@
+.box {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.card {
+  width: 310px;
+  height: 280px;
+  background-color: #fff;
+  margin: 30px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0px 0px 10px #42610784;
+}
+.card p {
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.card button {
+  /* margin: 20px; */
+  margin-top: 10px;
+  background-color: #67970ffa;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.card button:hover {
+  background-color: #195a0ad1;
+}
+.Jeck {
+  visibility: hidden;
+  display: none !important;
+}

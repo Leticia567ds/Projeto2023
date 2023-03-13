@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../geral/style.css">
-    <title>Frota</title>
+    <title>AgroTeach</title>
 </head>
 
 <body onload="carregar()">
@@ -15,8 +15,8 @@
         <nav>
             <ul>
                 <li><a href="../motor-front/index.html">Motoristas</a></li>
-                <li><a href="">Manutenção</a></li>
-                <li><a href="">Operações</a></li>
+                <li><a href="../manutencoes/index.html">Manutenção</a></li>
+                <li><a href="../operaçoes/index.html">Operações</a></li>
             </ul>
         </nav>
         <div>
@@ -53,23 +53,24 @@
         </div>
 
 
+ <!-- ---------------------------------------------- alterar ---------------------------------------------- -->
 
+ <div class="modal editar Jec">
+    <div class="modal-content">
+        <div class="modal-content-body">
+            <input type="text" class="input" id="ida" placeholder="id" readonly>
+            <input type="text" class="input" id="placaa" placeholder="placa">
+            <input type="text" class="input" id="modeloa" placeholder="modelo">
+            <input type="text" class="input" id="marcaa" placeholder="marca">
+        </div>
+        <div class="modal-content-footer">
+            <button onclick="alterar()"  id="cadastro" class="btn confirm">Alterar</button>
+            <button onclick="fecharCadastro()" class="btn cancel">Cancelar</button>
+        </div>
+    </div>
+</div>
 
-        <!-- 
-        <div class="modal editar ">
-            <div class="modal-content">
-                <div class="modal-content-body">
-                    <input type="text" class="input" id="idp" placeholder="id" readonly>
-                    <input type="text" class="input" id="nomep" placeholder="nome">
-                    <input type="text" class="input" id="cnhp" placeholder="cnh">
-                    <input type="text" class="input" id="cpfp" placeholder="cpf">
-                </div>
-                <div class="modal-content-footer">
-                    <button onclick="alterar()" class="btn confirm">Alterar</button>
-                    <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
-                </div>
-            </div>
-        </div> -->
+      
 
     </main>
 </body>

@@ -91,3 +91,7 @@ input {
   margin: 5px;
 }
 
+.model{
+  visibility: hidden;
+  display: none !important;
+}

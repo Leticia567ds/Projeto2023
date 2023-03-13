@@ -24,7 +24,7 @@ const update = async (req, res) => {
         },
         data: req.body
     })
-    res.status(202).json(frota).end();
+    res.status(200).json(frota).end();
 }
 
 const remove = async (req, res) => {

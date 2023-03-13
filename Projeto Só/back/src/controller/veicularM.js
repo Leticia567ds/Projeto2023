@@ -17,7 +17,21 @@ const read = async (req, res) => {
     res.status(200).json(Veiculo).end();
 }
 
+const update = async (req, res) => {
+    let info = {
+        dataF:new Date()
+    }
+    const Veiculo = await prisma.manutencaoVeicular.update({
+        data: info,
+        where: {
+            id: Number(req.params.id)
+        }
+    })
+
+    res.status(202).end();
+}
 module.exports = {
     create,
-    read
+    read,
+    update
 }

@@ -9,5 +9,6 @@ router.post("*", midle.ValidaAcesso);
 
 router.post("/registrar", vm.create);
 router.get("/registrar", vm.read);
+router.put("/registrar/:id", vm.update);
 
 module.exports = router;
