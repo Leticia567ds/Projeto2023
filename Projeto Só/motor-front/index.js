@@ -91,6 +91,11 @@ function fecharModalCadastro() {
   editar.classList.add("model");
 }
 
+function fecharCadastro() {
+  cada.classList.add("model");
+}
+
+
 function alterar() {
   var id = document.querySelector("#idp").value;
 

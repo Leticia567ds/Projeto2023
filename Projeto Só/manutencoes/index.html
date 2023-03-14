@@ -30,10 +30,43 @@
                 <p id="dataF">Data Fim: </p>
                 <p id="valor">Valor: </p>
                 <p id="des">Descrição: </p>
-                <button>Concluir</button>
+                <button id="alter">Concluir</button>
+                <button id="del">Deletar</button>
+                <button id="al" onclick="abrirCadastro()">alterar</button>
             </div>
         </div>
+<!-- ---------------------------------------------- Cadastrar ---------------------------------------- -->
 
+<div class="modal cadastrar Jeck">
+    <div class="modal-content">
+        <div class="modal-content-body">
+            <input type="text" class="input" id="id_veioc" placeholder="id do veículo">
+            <input type="text" class="input" id="valoroc" placeholder="valor">
+            <input type="text" class="input" id="desoc" placeholder="descrição">
+        </div>
+        <div class="modal-content-footer">
+            <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+            <button onclick="fecharModalCadastro()" class="btn cancel">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+ <!-- ---------------------------------------------- alterar ---------------------------------------------- -->
+
+ <div class="modal editar Jeck">
+    <div class="modal-content">
+        <div class="modal-content-body">
+            <input type="text" class="input" id="idp" placeholder="id" readonly>
+            <input type="text" class="input" id="id_veiculo" placeholder="id_veic">
+            <input type="text" class="input" id="valorp" placeholder="valor">
+            <input type="text" class="input" id="desp" placeholder="descrição">
+        </div>
+        <div class="modal-content-footer">
+            <button onclick="alterar()" class="btn confirm">Alterar</button>
+            <button onclick="fecharCadastro()" class="btn cancel">Cancelar</button>
+        </div>
+    </div>
+</div>
 
 </body>
 <script src="index.js"></script>
