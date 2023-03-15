@@ -20,6 +20,10 @@
   padding: 5px;
   font-family: "Times New Roman", Times, serif;
 }
+#cl{
+  color: rgba(18, 143, 12, 0.816);
+  
+}
 
 .card button {
   /* margin: 20px; */

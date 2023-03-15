@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../geral/style.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Relatório</title>
+</head>
+
+<body>
+    <header class="header">
+        <nav>
+            <ul>
+                <li><a id="cl" href="">Relatório</a></li>
+                <li><a href="../motor-front/index.html">Motoristas</a></li>
+                <li><a href="../frota-front/index.html">Frota</a></li>
+                <li><a href="../manutencoes/index.html">Manutenção</a></li>
+                <li><a href="../operaçoes/index.html">Operaçôes</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <nav class="nav1">
+            <div class="buttons">
+                <button onclick="relatorioVeiculos()">Veículos</button>
+                <button onclick="relatorioManutencao()">Manutenção</button>
+                <!-- <button onclick="relatorioOperacao()">Operação</button> -->
+            </div>
+        </nav>
+        <nav class="nav2">
+            <div class="myChartManutencao model">
+                <h2>Gráfico de Gastos (Veículos)</h2>
+                <canvas id="grafico-manutencao" width=800 height=330></canvas>
+            </div>
+
+
+            <div class="myChartVeiculos model">
+                <h2>Gráfico de disponibilidade de veículos</h2>
+                <canvas id="grafico-veiculo" width=900 height=300></canvas>
+            </div>
+
+
+        </nav>
+    </main>
+</body>
+<script src="index.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
+</html>

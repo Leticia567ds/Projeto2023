@@ -8,13 +8,15 @@
     <link rel="stylesheet" href="style.css">
     <title>AgroTeach</title>
 </head>
-<body>
+<body onload="carregar()">
     <header class="header">
         <nav>
             <ul>
+                <li><a id="cl" href="">Operações</a></li>
                 <li><a href="../motor-front/index.html">Motoristas</a></li>
                 <li><a href="../frota-front/index.html">Frota</a></li>
                 <li><a href="../manutencoes/index.html">Manutenção</a></li>
+                <li><a href="../Relatorios/index.html">Relatório</a></li>
                 
             </ul>
         </nav>
@@ -23,16 +25,33 @@
         </div>
     </header>
     <main>
+        <!-- ------------------------Carrregar---------------------- -->
         <div class="box">
             <div class="card Jeck">
                 <p id="id">Id: </p>
-                <p id="id_veic">Id do Veículo: </p>
-                <p id="dataI">Data: </p>
-                <p id="dataF">Data de Saída: </p>
-                <p id="valor">Valor: </p>
+                <p id="id_motorista">Id do motorista: </p>
+                <p id="id_veic">Id de veículo: </p>
+                <p id="dataS">Data de Saída: </p>
+                <p id="dataR">Data de retorno: </p>
                 <p id="des">Descrição: </p>
-                <button>Concluir</button>
+                <button id="cm">Concluir</button>
+            </div>
+        </div>
+        <!-- ----------------------Cadastrar-------------------- -->
+
+        <div class="modal cadastrar Jeck">
+            <div class="modal-content">
+                <div class="modal-content-body">
+                    <input type="text" class="input" id="nomec" placeholder="nome">
+                    <input type="text" class="input" id="cnhc" placeholder="cnh">
+                    <input type="text" class="input" id="cpfc" placeholder="cpf">
+                </div>
+                <div class="modal-content-footer">
+                    <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
+                    <button onclick="fecharCadastro()" class="btn cancel">Cancelar</button>
+                </div>
             </div>
         </div>
 </body>
+<script src="index.js"></script>
 </html>

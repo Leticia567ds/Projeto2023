@@ -17,6 +17,18 @@ const read = async (req, res) => {
     res.status(200).json(Veiculo).end();
 }
 
+const gastoTotal = async (req, res) => {
+    let Veiculo = await prisma.$queryRaw`SELECT v.placa, SUM(m.valor) as total, MONTH(m.dataI) as mes FROM manutencaoVeicular m
+    INNER JOIN frota v
+    ON v.id = m.id_veic
+    GROUP BY m.id_veic, MONTH(m.dataI) ORDER BY v.placa`;
+
+    res.status(200).json(Veiculo).end();
+};
+
+
+
+
 const update = async (req, res) => {
     let info = {
         dataF:new Date()
@@ -63,5 +75,6 @@ module.exports = {
     read,
     update,
     remove,
-    alterar
+    alterar,
+    gastoTotal
 }

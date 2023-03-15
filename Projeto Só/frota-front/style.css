@@ -33,6 +33,10 @@
 .card button:hover {
   background-color: #195a0ad1;
 }
+#cl{
+  color: rgba(18, 143, 12, 0.816);
+  
+}
 
 .Jeck {
   visibility: hidden;

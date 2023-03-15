@@ -37,6 +37,9 @@
   visibility: hidden;
   display: none !important;
 }
+#cl{
+  color: rgba(18, 143, 12, 0.816);
+}
 
 .modal {
   display: flex;
