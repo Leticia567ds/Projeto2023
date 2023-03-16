@@ -40,6 +40,7 @@ const listarM = () => {
     //     element.descricao
     //   );
     // });
+    if(userInfo.cargo == "Gerente"){
     lista.querySelector("#del").addEventListener("click", () => {
       remover(element.id);
     });
@@ -47,6 +48,9 @@ const listarM = () => {
     lista.querySelector("#alter").addEventListener("click", () => {
       concluir(element.id);
     });
+  }else{
+    lista.querySelector(".box").disabled = true;
+  }
     corpo.appendChild(lista);
   });
 };
@@ -129,7 +133,8 @@ function cadastrar() {
     body: JSON.stringify(corpo),
   };
 
-  fetch("http://localhost:3000/registrar", options).then((res) => {
+  fetch("http://localhost:3000/registrar", options)
+  .then((res) => {
     if (res.status == 200) window.location.reload();
     else console.log(res); // Exibe a resposta completa no console
     return res.json();

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="style.css">
     <title>AgroTeach</title>
 </head>
+
 <body onload="carregar()">
     <header class="header">
         <nav>
@@ -17,7 +19,7 @@
                 <li><a href="../frota-front/index.html">Frota</a></li>
                 <li><a href="../manutencoes/index.html">Manutenção</a></li>
                 <li><a href="../Relatorios/index.html">Relatório</a></li>
-                
+
             </ul>
         </nav>
         <div>
@@ -34,7 +36,7 @@
                 <p id="dataS">Data de Saída: </p>
                 <p id="dataR">Data de retorno: </p>
                 <p id="des">Descrição: </p>
-                <button id="cm">Concluir</button>
+                <button class="btn" id="cm">Concluir</button>
             </div>
         </div>
         <!-- ----------------------Cadastrar-------------------- -->
@@ -42,9 +44,9 @@
         <div class="modal cadastrar Jeck">
             <div class="modal-content">
                 <div class="modal-content-body">
-                    <input type="text" class="input" id="nomec" placeholder="nome">
-                    <input type="text" class="input" id="cnhc" placeholder="cnh">
-                    <input type="text" class="input" id="cpfc" placeholder="cpf">
+                    <input type="text" class="input" id="idm" placeholder="id do motorista">
+                    <input type="text" class="input" id="idc" placeholder="id do veículo">
+                    <input type="text" class="input" id="desc" placeholder="Descrição">
                 </div>
                 <div class="modal-content-footer">
                     <button onclick="cadastrar()" id="cadastro" class="btn confirm">Cadastrar</button>
@@ -52,6 +54,8 @@
                 </div>
             </div>
         </div>
+   
 </body>
 <script src="index.js"></script>
+
 </html>

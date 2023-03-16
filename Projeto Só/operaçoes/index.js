@@ -1,8 +1,8 @@
 const userInfo = JSON.parse(localStorage.getItem("info"));
 var card = document.querySelector(".card");
 var corpo = document.querySelector(".box");
-// const btCadedit = document.querySelector("#cadastro");
-// var cada = document.querySelector(".cadastrar");
+const btCadedit = document.querySelector("#cadastro");
+var cada = document.querySelector(".cadastrar");
 // var editar = document.querySelector(".editar");
 
 var listar = [];
@@ -34,14 +34,18 @@ const listarOP = () => {
     lista.querySelector("#dataS").innerHTML += formatarData(element.dataS);
     lista.querySelector("#dataR").innerHTML += formatarData(element.dataR);
     lista.querySelector("#des").innerHTML += element.descricao;
-
+  if(userInfo.cargo === "Gerente"){
     lista.querySelector("#cm").addEventListener("click", () => {
       concluir(element.id);
     });
-    corpo.appendChild(lista);
+
+  } else {
+    lista.querySelector(".box").disabled = true;
+   
+  }
+  corpo.appendChild(lista);
   });
 };
-
 
 function formatarData(valor) {
   if (valor == null) return "-";
@@ -71,34 +75,43 @@ function concluir(id) {
   });
 }
 
+function abrirModalCadastro() {
+  btCadedit.onclick = () => {
+    cadastrar();
+  };
+  console.log(cada);
+  cada.classList.remove("Jeck");
+}
+
+function fecharCadastro() {
+  cada.classList.add("Jeck");
+}
+
 function cadastrar() {
-  let nome = document.querySelector("#nomec").value;
-  let cnh = document.querySelector("#cnhc").value;
-  let cpf = document.querySelector("#cpfc").value;
+  let id_mt = document.querySelector("#idm").value;
+  let id_vc = document.querySelector("#idc").value;
+  let descricao = document.querySelector("#desc").value;
 
   let corpo = {
-    "nome":nome,
-    "CNH": cnh,
-    "CPF": cpf
+    id_motor: parseInt(id_mt),
+    id_veic: parseInt(id_vc),
+    descricao: descricao,
   };
-  // const token = 
+  // const token =
 
   let options = {
-    "method": "POST",
-    "headers": {
-        "content-type": "application/json",
-        "Bearer":JSON.parse(localStorage.getItem("info")).token
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      Bearer: JSON.parse(localStorage.getItem("info")).token,
     },
-    "body": JSON.stringify(corpo)
-};
+    body: JSON.stringify(corpo),
+  };
 
-fetch("http://localhost:3000/motorista", options)
-.then((res) => {
-  if (res.status == 200) window.location.reload();
-  else console.log(res); // Exibe a resposta completa no console
-  return res.json();
-})
-.catch((error) => {
-  console.error("Fetch error:", error);
-});
+  fetch("http://localhost:3000/operacao/", options)
+    .then((res) => {
+      if (res.status == 200) window.location.reload();
+      else console.log(res); // Exibe a resposta completa no console
+      return res.json();
+    })
 }

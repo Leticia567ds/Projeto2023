@@ -68,9 +68,6 @@ function abrirModalCadastro() {
   btCadedit.onclick = () => {
     cadastrar();
   };
-  // document.querySelector("#nomec").value = "";
-  // document.querySelector("#cpfc").value = "";
-  // document.querySelector("#cnhc").value = "";
   console.log(cada);
   cada.classList.remove("model");
 }

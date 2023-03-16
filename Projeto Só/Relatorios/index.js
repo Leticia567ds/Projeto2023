@@ -10,6 +10,7 @@ function relatorioManutencao() {
     fetch(`http://localhost:3000/registrar/relatorio`)
         .then(response => response.json())
         .then(response => {
+            //informações que aprecerão no gráfico
             let labels = [
                 'Janeiro',
                 'Fevereiro',
@@ -26,6 +27,7 @@ function relatorioManutencao() {
             ];
             let datasets = [];
             let placaAtual = "";
+            //adicionar cor na barra
             let color = [
                 "#C5DFAA",
                 "#D9BF77",
@@ -85,66 +87,46 @@ function relatorioManutencao() {
 }
 
 
-function relatorioVeiculos() {
-    veiculo.classList.remove('model')
-    manutencao.classList.add('model')
-    // operacao.classList.add('model')
+function relatorioFrota() {
+    var Frota = document.querySelector("#grafico-veiculo")
+    // manutencao.classList.remove('model')
+    // // operacao.classList.add('model')
+    // veiculo.classList.add('model')
 
-    var ctxVeiculo = document.querySelector("#grafico-veiculo")
-    fetch(`http://localhost:3000/frota`)
-        .then(response => response.json())
-        .then(response => {
-            let veiculos = {
-                placas: [],
-                dispo: [],
-                cor: []
-            }
-
-            let corFalsa = "#2E8B57";
-            let corVerdadeira = '#ff4040'
-
-            response.forEach(v => {
-                veiculos.placas.push(v.placa);
-                veiculos.dispo.push(1);
-                if (v.uso) {
-                    veiculos.cor.push(corVerdadeira)
-                } else {
-                    veiculos.cor.push(corFalsa)
-                }
-
-                console.log(veiculos.placas);
-            })
-            new Chart(ctxVeiculo, {
-                type: 'pie',
-                data: {
-                    labels: veiculos.placas,
-                    datasets: [{
-                        label: 'Veiculos',
-                        data: veiculos.dispo,
-                        backgroundColor: veiculos.cor
-                    }]
-                },
-
-
-                title: {
-                    display: true,
-                    text: 'Chart.js Pie Chart'
-
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            position: 'top',
-                        },
-                        responsive: true,
-                        scales: {
-                            y: {
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                }
-            });
-
-        })
+    new Chart(Frota, {
+      type: 'line',
+      data: {
+        labels: [],
+        datasets: [{
+          label: 'Quantidade de carros e motos',
+          data: [],
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
+      },
+      options: {
+        responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: 'Tempo'
+        }
+      },
+      y: {
+        title: {
+          display: true,
+          text: 'Valor'
+        },
+        suggestedMin: 0,
+        suggestedMax: 100
+      }
+    }
+  }
+   
+})
 }
+
+

@@ -41,3 +41,72 @@
     visibility: hidden;
     display: none !important;
   }
+
+  .modal {
+    display: flex;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(14, 13, 14, 0.378);
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-content {
+    width: 40vw;
+    height: 30vh;
+    background-color: rgba(49, 170, 103, 0.504);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    justify-content: space-evenly;
+  }
+  
+  .modal-content-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10px;
+  }
+  .modal-content > button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px 30px;
+  }
+  .modal-content-body {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    padding: 5px;
+    margin: 5px;
+  }
+  
+  .cancel {
+    /* margin: 10px; */
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: #fa2828;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .cancel:hover {
+    background-color: #fe0000;
+  }
+  .confirm:hover {
+    background-color: #0c4d1c;
+  }
+  .confirm {
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    background-color: #206d33;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  

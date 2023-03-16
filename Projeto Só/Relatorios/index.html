@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../geral/style.css">
     <link rel="stylesheet" href="style.css">
     <title>Relatório</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
     <main>
         <nav class="nav1">
             <div class="buttons">
-                <button onclick="relatorioVeiculos()">Veículos</button>
+                <button onclick="relatorioFrota()">Veículos</button>
                 <button onclick="relatorioManutencao()">Manutenção</button>
                 <!-- <button onclick="relatorioOperacao()">Operação</button> -->
             </div>
@@ -38,15 +40,11 @@
             </div>
 
 
-            <div class="myChartVeiculos model">
-                <h2>Gráfico de disponibilidade de veículos</h2>
-                <canvas id="grafico-veiculo" width=900 height=300></canvas>
-            </div>
+         
 
 
         </nav>
     </main>
 </body>
 <script src="index.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js'></script>
 </html>
