@@ -6,7 +6,6 @@ function relatorioManutencao() {
     var Manutencao = document.querySelector("#grafico-manutencao")
     manutencao.classList.remove('model')
     // operacao.classList.add('model')
-    veiculo.classList.add('model')
     fetch(`http://localhost:3000/registrar/relatorio`)
         .then(response => response.json())
         .then(response => {
@@ -84,49 +83,6 @@ function relatorioManutencao() {
                 }
             })
         })
-}
-
-
-function relatorioFrota() {
-    var Frota = document.querySelector("#grafico-veiculo")
-    // manutencao.classList.remove('model')
-    // // operacao.classList.add('model')
-    // veiculo.classList.add('model')
-
-    new Chart(Frota, {
-      type: 'line',
-      data: {
-        labels: [],
-        datasets: [{
-          label: 'Quantidade de carros e motos',
-          data: [],
-          fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
-        }]
-      },
-      options: {
-        responsive: true,
-    maintainAspectRatio: false,
-    scales: {
-      x: {
-        title: {
-          display: true,
-          text: 'Tempo'
-        }
-      },
-      y: {
-        title: {
-          display: true,
-          text: 'Valor'
-        },
-        suggestedMin: 0,
-        suggestedMax: 100
-      }
-    }
-  }
-   
-})
 }
 
 

@@ -85,6 +85,7 @@ function abrirModal(id, nome, cpf, cnh) {
 }
 
 function fecharModalCadastro() {
+  
   editar.classList.add("model");
 }
 
